@@ -63,23 +63,23 @@ removeApp() {
 deployAzureResources() {
     source ./demo-env.sh
 
-    oc apply -f ./aro-demo/aso-cosmosdb.yaml
     oc apply -f aro-demo/aso-appinsights.yaml
+    oc apply -f ./aro-demo/aso-cosmosdb.yaml
 }
 
 removeAzureResources() {
     source ./demo-env.sh
 
-    oc delete -f ./aro-demo/aso-cosmosdb.yaml
     oc delete -f aro-demo/aso-appinsights.yaml
+    oc delete -f ./aro-demo/aso-cosmosdb.yaml
 }
 
 up() {
     source ./demo-env.sh
 
     addAcrPullSecret
-    deployApp
     deployAzureResources
+    deployApp
 }
 
 down() {
@@ -143,6 +143,6 @@ case "$subcommand" in
     ;;
 
     *)
-        echo "$0 up|down|status|showSecrets|buildApp|deployApp|removeApp"
+        echo "$0 up|down|status|secrets|buildApp|deployApp|removeApp"
     ;;
 esac

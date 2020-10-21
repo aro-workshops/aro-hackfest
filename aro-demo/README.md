@@ -82,7 +82,7 @@ Deploy the app and its Azure resources:
 ```sh
 ./demo.sh up
 ./demo.sh status
-./demo.sh showSecrets
+./demo.sh secrets
 
 oc get CosmosDB
 oc describe CosmosDB service-tracker-db
