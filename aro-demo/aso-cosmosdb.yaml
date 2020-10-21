@@ -1,0 +1,12 @@
+apiVersion: azure.microsoft.com/v1alpha1
+kind: CosmosDB
+metadata:
+  name: service-tracker-db
+spec:
+  kind: MongoDB
+  location: australiaeast
+  resourceGroup: aro-demo
+  properties:
+    databaseAccountOfferType: Standard
+    mongoDBVersion: "3.2"
+    isVirtualNetworkFilterEnabled: false

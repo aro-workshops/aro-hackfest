@@ -24,21 +24,16 @@ spec:
               memory: "1024Mi"
               cpu: "1000m"
           env:
-            - name: MONGODB_USER
+            - name: MONGODB_CONNSTR
               valueFrom:
                 secretKeyRef:
-                  name: cosmos-db-secret
-                  key: user
-            - name: MONGODB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: cosmos-db-secret
-                  key: pwd
+                  name: service-tracker-db
+                  key: PrimaryMongoDBConnectionString
             - name: APPINSIGHTS_INSTRUMENTATIONKEY
               valueFrom:
                 secretKeyRef:
-                  name: cosmos-db-secret
-                  key: appinsights                   
+                  name: appinsights-aro-demo-appinsights-demo
+                  key: instrumentationKey
           ports:
           - containerPort: {{.Values.deploy.containerPort}}
             protocol: TCP

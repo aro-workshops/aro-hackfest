@@ -1,0 +1,19 @@
+#!/bin/bash
+
+export RG_NAME=aro-demo
+export LOCATION=<region>
+export ACR_NAME=<acr-name>
+export PROJECT_NAME=aro-demo
+export APPS_DOMAIN=apps.aro.<domain>
+
+export DATA_API_TAG=1.0
+export FLIGHTS_API_TAG=1.0
+export QUAKES_API_TAG=1.0
+export WEATHER_API_TAG=1.0
+export SERVICE_TRACKER_UI_TAG=1.0
+
+oc project $PROJECT_NAME
+
+if [[ $? != 0 ]]; then
+    oc new-project $PROJECT_NAME
+fi

@@ -24,13 +24,16 @@ spec:
               cpu: "1.0"
           env:
             - name: FLIGHT_API_ROOT
-              value: http://flights-api.hackfest.svc.cluster.local:3003/
+              value: http://flights-api:3003/
             - name: WEATHER_API_ROOT
-              value: http://weather-api.hackfest.svc.cluster.local:3015/
+              value: http://weather-api:3015/
             - name: QUAKES_API_ROOT
-              value: http://quakes-api.hackfest.svc.cluster.local:3012/
+              value: http://quakes-api:3012/
             - name: APPINSIGHTS_INSTRUMENTATIONKEY
-              value: 6dc23005-a1d0-418a-82bd-b232498b5221
+              valueFrom:
+                secretKeyRef:
+                  name: appinsights-aro-demo-appinsights-demo
+                  key: instrumentationKey
             - name: KUBE_NODE_NAME
               valueFrom:
                 fieldRef:

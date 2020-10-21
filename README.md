@@ -1,5 +1,10 @@
 [![Build Status](https://dev.azure.com/appdev-gbb/kubernetes-hackfest/_apis/build/status/dstrebel.kubernetes-hackfest)](https://dev.azure.com/appdev-gbb/kubernetes-hackfest/_build/latest?definitionId=2)
 
+## ARO demo - adapted from the original (https://github.com/Azure/kubernetes-hackfest)
+
+* Deploys onto ARO cluster and uses Azure Service Operator for CosmosDB and AppInsights
+* See the [ARO Demo steps](./aro-demo/README.md)
+
 ## Prerequisites 
 The following are the basic requirements to **start** the labs. Individual labs may have other requirements that will be listed within the lab.
 

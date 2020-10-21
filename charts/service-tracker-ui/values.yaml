@@ -1,7 +1,6 @@
 # Default values for chart
-
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 8080
 
 deploy:

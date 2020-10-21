@@ -80,3 +80,6 @@ labs/security/secure-tiller/*.srl
 *~
 *.swp
 *.swo
+
+# ARO Demo
+demo-env.sh
