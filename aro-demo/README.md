@@ -113,4 +113,5 @@ Cleanup:
 Resource
 --------
 
-* https://github.com/Azure/azure-service-operator/tree/master/docs/services
+* [Demo Script](./Demo-script.md)
+* [Azure Service Operator - Services YAMLs](https://github.com/Azure/azure-service-operator/tree/master/docs/services)
